@@ -7,6 +7,14 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added
 - Kafka helper package (planned)
 
+## [0.1.2] - 2026-07-06
+
+### Fixed
+- `WriteError` no longer leaks internal error strings on 500 responses
+
+### Added
+- `httputil` unit tests
+
 ## [0.1.0] - 2026-07-06
 
 ### Added

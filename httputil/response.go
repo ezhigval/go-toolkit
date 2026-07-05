@@ -43,19 +43,23 @@ func WriteJSON(w http.ResponseWriter, status int, v any) {
 func WriteError(w http.ResponseWriter, err error) {
 	var appErr *AppError
 	if errors.As(err, &appErr) {
+		detail := appErr.Title
+		if appErr.Err != nil {
+			detail = appErr.Err.Error()
+		}
 		WriteJSON(w, appErr.Status, Problem{
 			Status: appErr.Status,
 			Title:  appErr.Title,
-			Detail: appErr.Err.Error(),
+			Detail: detail,
 			Code:   appErr.Code,
 		})
 		return
 	}
 
+	slog.Error("unhandled error", "error", err)
 	WriteJSON(w, http.StatusInternalServerError, Problem{
 		Status: http.StatusInternalServerError,
 		Title:  "internal server error",
-		Detail: err.Error(),
 	})
 }
 
