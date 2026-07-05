@@ -72,3 +72,5 @@ func parseLevel(s string) slog.Level {
 		return slog.LevelInfo
 	}
 }
+
+// TODO: support dynamic level reload via atomic.Value for production tuning
