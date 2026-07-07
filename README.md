@@ -1,5 +1,10 @@
 # go-toolkit
 
+![Go](https://img.shields.io/badge/Go-1.25-00ADD8?logo=go&logoColor=white)
+[![CI](https://github.com/ezhigval/go-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/ezhigval/go-toolkit/actions/workflows/ci.yml)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Tier](https://img.shields.io/badge/tier-shared-0e8a16)
+
 Shared infrastructure library for Go backend portfolio projects.
 
 ## Packages
