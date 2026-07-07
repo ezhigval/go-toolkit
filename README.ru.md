@@ -5,22 +5,22 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Tier](https://img.shields.io/badge/tier-shared-0e8a16)
 
-**English** · [Русский](README.ru.md)
+**[English](README.md)** · Русский
 
-Shared infrastructure library for Go backend portfolio projects.
+Общая инфраструктурная библиотека для Go backend-проектов портфолио.
 
-## Packages
+## Пакеты
 
-| Package | Description |
+| Пакет | Описание |
 |---|---|
-| `logger` | slog setup with JSON/text output, request context |
-| `config` | Generic env config loader |
-| `httputil` | JSON responses, RFC 7807-style errors, health handler |
-| `pgx` | PostgreSQL connection pool factory |
-| `redis` | Redis client factory |
+| `logger` | Настройка slog: JSON/text, контекст запроса |
+| `config` | Универсальная загрузка конфига из env |
+| `httputil` | JSON-ответы, ошибки в стиле RFC 7807, health handler |
+| `pgx` | Фабрика пула подключений PostgreSQL |
+| `redis` | Фабрика клиента Redis |
 | `middleware` | RequestID, Recover, AccessLog |
 
-## Usage
+## Использование
 
 ```go
 import (
@@ -49,14 +49,15 @@ func main() {
 }
 ```
 
-## Local development
+## Локальная разработка
 
-Used as a Go module. During active development, consuming projects use:
+Подключается как Go-модуль. Пока библиотека в активной разработке, в зависимых проектах:
 
 ```go
+// go.mod
 replace github.com/ezhigval/go-toolkit => ../../shared/go-toolkit
 ```
 
-## License
+## Лицензия
 
 MIT

@@ -8,8 +8,8 @@ import (
 )
 
 type Config struct {
-	Level  string // debug, info, warn, error
-	Format string // json, text
+	Level  string
+	Format string
 }
 
 func New(cfg Config) *slog.Logger {
@@ -72,5 +72,3 @@ func parseLevel(s string) slog.Level {
 		return slog.LevelInfo
 	}
 }
-
-// TODO: support dynamic level reload via atomic.Value for production tuning
